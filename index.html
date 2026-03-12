@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skin Alchemy — Skin Awakening</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Scientific grid overlay -->
+  <div class="sci-grid-overlay"></div>
+
+  <!-- ===== SECTION 1: HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-microscopy"></div>
+    <div class="hero-content hero-content--centered">
+      <div class="hero-text">
+        <h1 class="hero-headline fade-in">
+          Your Skin Is Not Cosmetic.<br>It Is <em>Biological.</em>
+        </h1>
+        <p class="hero-subheadline fade-in" style="animation-delay: 0.3s">
+          Join <strong>Skin Awakening</strong> — a private correspondence exploring the science behind skin health.
+        </p>
+        <a href="#quiz" class="btn-primary fade-in" style="animation-delay: 0.6s">
+          Take the Skin Intelligence Test
+        </a>
+      </div>
+    </div>
+    <div class="cell-diagram cell-diagram--hero">
+      <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="60" cy="60" r="50" stroke="#C8A96A" stroke-width="0.5" opacity="0.15"/>
+        <circle cx="60" cy="60" r="20" stroke="#C8A96A" stroke-width="0.3" opacity="0.1"/>
+        <circle cx="60" cy="55" r="8" stroke="#C8A96A" stroke-width="0.3" opacity="0.1"/>
+        <ellipse cx="40" cy="45" rx="6" ry="3" stroke="#C8A96A" stroke-width="0.3" opacity="0.08" transform="rotate(-30 40 45)"/>
+        <ellipse cx="80" cy="70" rx="5" ry="2.5" stroke="#C8A96A" stroke-width="0.3" opacity="0.08" transform="rotate(20 80 70)"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 2: MEET AMAL ===== -->
+  <section class="meet-amal" id="amal">
+    <div class="container">
+      <div class="amal-grid">
+        <div class="amal-portrait scroll-reveal">
+          <div class="amal-portrait-frame">
+            <img src="amal.png" alt="Amal — The Skin Correspondent" class="amal-img">
+            <div class="amal-light-ring"></div>
+          </div>
+        </div>
+        <div class="amal-text scroll-reveal" style="--delay: 0.2s">
+          <p class="amal-eyebrow">The Correspondent</p>
+          <h2 class="section-headline">Meet <em>Amal</em></h2>
+          <p class="amal-role">Your Skin Correspondent</p>
+          <p class="amal-body">
+            Amal is the Skin Correspondent investigating the biological signals shaping your skin — from circadian rhythms to the skin microbiome.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3: THE PROBLEM ===== -->
+  <section class="problem" id="problem">
+    <div class="container">
+      <h2 class="section-headline dark scroll-reveal">Most Skincare Advice Is <em>Incomplete</em></h2>
+      <div class="problem-columns">
+        <div class="problem-card scroll-reveal" style="--delay: 0.1s">
+          <div class="problem-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="14" y="8" width="20" height="32" rx="10" stroke="#0D0D0D" stroke-width="1.5"/>
+              <circle cx="24" cy="18" r="3" stroke="#0D0D0D" stroke-width="1"/>
+              <line x1="24" y1="24" x2="24" y2="32" stroke="#0D0D0D" stroke-width="1"/>
+            </svg>
+          </div>
+          <h3>Products</h3>
+          <p>Skincare routines focus on products.</p>
+        </div>
+        <div class="problem-divider scroll-reveal" style="--delay: 0.2s">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="#C8A96A" stroke-width="1.5"/></svg>
+        </div>
+        <div class="problem-card scroll-reveal" style="--delay: 0.3s">
+          <div class="problem-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="8" stroke="#0D0D0D" stroke-width="1.5"/>
+              <path d="M24 8v4M24 36v4M8 24h4M36 24h4M12 12l3 3M33 33l3 3M12 36l3-3M33 15l3-3" stroke="#0D0D0D" stroke-width="1"/>
+            </svg>
+          </div>
+          <h3>Signals</h3>
+          <p>Skin responds to light, sleep, stress, temperature.</p>
+          <div class="signal-tags">
+            <span>Light</span><span>Sleep</span><span>Stress</span><span>Temperature</span>
+          </div>
+        </div>
+        <div class="problem-divider scroll-reveal" style="--delay: 0.4s">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="#C8A96A" stroke-width="1.5"/></svg>
+        </div>
+        <div class="problem-card scroll-reveal" style="--delay: 0.5s">
+          <div class="problem-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="20" r="10" stroke="#0D0D0D" stroke-width="1.5"/>
+              <path d="M18 33c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#0D0D0D" stroke-width="1.5"/>
+              <circle cx="24" cy="20" r="3" fill="#0D0D0D" opacity="0.2"/>
+            </svg>
+          </div>
+          <h3>Biology</h3>
+          <p>Understanding skin biology changes everything.</p>
+        </div>
+      </div>
+    </div>
+    <div class="cell-diagram cell-diagram--problem">
+      <svg viewBox="0 0 100 100" fill="none">
+        <circle cx="50" cy="50" r="40" stroke="#0D0D0D" stroke-width="0.4" opacity="0.06"/>
+        <circle cx="50" cy="50" r="15" stroke="#0D0D0D" stroke-width="0.3" opacity="0.05"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 4: SKIN INTELLIGENCE QUIZ ===== -->
+  <section class="quiz" id="quiz">
+    <div class="container">
+      <div class="quiz-content scroll-reveal">
+        <h2 class="section-headline">Skin Intelligence <em>Test</em></h2>
+        <p class="quiz-body">How well do you understand your skin's biology?</p>
+
+        <div class="quiz-box">
+          <div class="quiz-progress">
+            <div class="quiz-progress-bar" id="quizProgress"></div>
+          </div>
+          <form id="quizForm">
+            <div class="quiz-step active">
+              <p class="quiz-question">1. What is the skin barrier responsible for?</p>
+              <div class="quiz-answers">
+                <label><input type="radio" name="q1" value="0"> Producing collagen</label>
+                <label><input type="radio" name="q1" value="1"> Protecting the skin and retaining moisture</label>
+                <label><input type="radio" name="q1" value="0"> Removing toxins</label>
+                <label><input type="radio" name="q1" value="0"> Absorbing skincare products</label>
+              </div>
+              <button type="button" class="btn-primary quiz-next" onclick="quizNext()">Next</button>
+            </div>
+            <div class="quiz-step">
+              <p class="quiz-question">2. When does most skin repair occur?</p>
+              <div class="quiz-answers">
+                <label><input type="radio" name="q2" value="1"> During sleep</label>
+                <label><input type="radio" name="q2" value="0"> During exercise</label>
+                <label><input type="radio" name="q2" value="0"> Afternoon</label>
+                <label><input type="radio" name="q2" value="0"> After moisturizer</label>
+              </div>
+              <button type="button" class="btn-primary quiz-next" onclick="quizNext()">Next</button>
+            </div>
+            <div class="quiz-step">
+              <p class="quiz-question">3. Which signal regulates your skin's biological clock?</p>
+              <div class="quiz-answers">
+                <label><input type="radio" name="q3" value="0"> Diet</label>
+                <label><input type="radio" name="q3" value="1"> Sunlight</label>
+                <label><input type="radio" name="q3" value="0"> Hydration</label>
+                <label><input type="radio" name="q3" value="0"> Pollution</label>
+              </div>
+              <button type="button" class="btn-primary quiz-next" onclick="quizNext()">Next</button>
+            </div>
+            <div class="quiz-step">
+              <p class="quiz-question">4. What damages the skin barrier?</p>
+              <div class="quiz-answers">
+                <label><input type="radio" name="q4" value="0"> Cleansing</label>
+                <label><input type="radio" name="q4" value="0"> Moisturizer</label>
+                <label><input type="radio" name="q4" value="1"> Over&#8209;cleansing and harsh exfoliation</label>
+                <label><input type="radio" name="q4" value="0"> Sunscreen</label>
+              </div>
+              <button type="button" class="btn-primary quiz-next" onclick="quizNext()">Next</button>
+            </div>
+            <div class="quiz-step">
+              <p class="quiz-question">5. The skin microbiome refers to:</p>
+              <div class="quiz-answers">
+                <label><input type="radio" name="q5" value="0"> Dead skin cells</label>
+                <label><input type="radio" name="q5" value="1"> Microorganisms living on the skin</label>
+                <label><input type="radio" name="q5" value="0"> Oil production</label>
+                <label><input type="radio" name="q5" value="0"> Collagen fibers</label>
+              </div>
+              <button type="button" class="btn-primary quiz-next" onclick="quizNext()">Next</button>
+            </div>
+            <div class="quiz-step">
+              <p class="quiz-question">Before revealing your result, where should Amal send your Skin Intelligence Score?</p>
+              <input type="text" class="quiz-input" placeholder="First Name" id="firstName">
+              <input type="text" class="quiz-input" placeholder="Family Name" id="familyName">
+              <input type="text" class="quiz-input" placeholder="Country of Origin" id="country">
+              <input type="email" class="quiz-input" placeholder="Email Address" id="email">
+              <button type="button" class="btn-primary quiz-next" onclick="quizCalculateScore()">Reveal My Score</button>
+            </div>
+          </form>
+          <div class="quiz-result" id="quizResult"></div>
+        </div>
+
+      </div>
+    </div>
+    <div class="cell-diagram cell-diagram--quiz">
+      <svg viewBox="0 0 140 140" fill="none">
+        <circle cx="70" cy="70" r="60" stroke="#C8A96A" stroke-width="0.3" opacity="0.07"/>
+        <circle cx="70" cy="70" r="40" stroke="#C8A96A" stroke-width="0.3" opacity="0.05"/>
+        <circle cx="70" cy="70" r="20" stroke="#C8A96A" stroke-width="0.2" opacity="0.04"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 5: JOIN THE INVESTIGATION ===== -->
+  <section class="invitation" id="invitation">
+    <div class="container">
+      <div class="invitation-content scroll-reveal">
+        <h2 class="section-headline light">The Investigation Begins <em>With You</em></h2>
+        <p class="invitation-body">
+          Join curious minds learning to read their skin like data.
+        </p>
+        <a href="#quiz" class="btn-primary btn-outline">Join Skin Awakening</a>
+      </div>
+    </div>
+    <div class="cell-diagram cell-diagram--invitation">
+      <svg viewBox="0 0 160 160" fill="none">
+        <circle cx="80" cy="80" r="70" stroke="#C8A96A" stroke-width="0.3" opacity="0.08"/>
+        <circle cx="80" cy="80" r="50" stroke="#C8A96A" stroke-width="0.3" opacity="0.06"/>
+        <circle cx="80" cy="80" r="30" stroke="#C8A96A" stroke-width="0.3" opacity="0.04"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo">Skin Alchemy</span>
+        </div>
+        <div class="footer-links">
+          <a href="#amal">Correspondence</a>
+          <a href="#problem">Signals</a>
+          <a href="#quiz">Quiz</a>
+        </div>
+        <div class="footer-social">
+          <p class="footer-cta">Follow the investigation</p>
+          <a href="#" class="footer-instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <circle cx="12" cy="12" r="5"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+            </svg>
+            Instagram
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Skin Alchemy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
