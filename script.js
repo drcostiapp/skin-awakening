@@ -102,11 +102,11 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     fetch('https://www.zohoapis.com/crm/v7/functions/captureskinquizlead/actions/execute?auth_type=apikey&zapikey=1003.4cef8ba001447a35cfa6dd58f1613813.222579883b00cb9b3a3915598f8e5baa', {
       method: 'POST',
-      mode: 'no-cors',
       headers: { 'Content-Type': 'text/plain' },
       body: JSON.stringify(data)
     })
-    .then(() => console.log("CRM request sent"))
+    .then(r => r.json())
+    .then(d => console.log("CRM Response:", d))
     .catch(e => console.log("CRM Error:", e));
   };
 
