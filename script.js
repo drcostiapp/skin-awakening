@@ -85,29 +85,63 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('quizResult').innerText = result;
     quizProgressBar.style.width = '100%';
 
-    // Send to CRM
+    // Send to CRM via Zoho Web Form
     let category = '';
     if (score <= 2) category = 'Skin Observer';
     else if (score <= 4) category = 'Skin Analyst';
     else category = 'Skin Researcher';
 
-    const data = {
-      firstname: document.getElementById('firstName').value,
-      lastname: document.getElementById('familyName').value,
-      country: document.getElementById('country').value,
-      email: document.getElementById('email').value,
-      score: score,
-      category: category,
-      source: "Skin Intelligence Quiz"
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('familyName').value;
+    const country = document.getElementById('country').value;
+    const email = document.getElementById('email').value;
+
+    // Create hidden iframe to receive form response (prevents page redirect)
+    let iframe = document.getElementById('zohoFormIframe');
+    if (!iframe) {
+      iframe = document.createElement('iframe');
+      iframe.id = 'zohoFormIframe';
+      iframe.name = 'zohoFormIframe';
+      iframe.style.display = 'none';
+      document.body.appendChild(iframe);
+    }
+
+    // Build and submit Zoho Web Form
+    const zohoForm = document.createElement('form');
+    zohoForm.method = 'POST';
+    zohoForm.action = 'https://crm.zoho.com/crm/WebToLeadForm';
+    zohoForm.target = 'zohoFormIframe';
+    zohoForm.acceptCharset = 'UTF-8';
+    zohoForm.style.display = 'none';
+
+    const fields = {
+      'xnQsjsdp': 'be6bdc9d0a2addf46c4423e67126edff751b8a41081d19b8a053aca059167e13',
+      'zc_gad': '',
+      'xmIwtLD': '8ed129b248161e58ecf8ecf42c5c2cbc0cc8fb2359093c71adb694de19b09c6329c594dbca287af1a4f2e10399f4689c',
+      'actionType': 'TGVhZHM=',
+      'returnURL': 'https\u003a\u002f\u002fdrcostiapp.github.io\u002fskin-awakening\u002f',
+      'Company': firstName + ' ' + lastName,
+      'First Name': firstName,
+      'Last Name': lastName,
+      'Email': email,
+      'Country': country,
+      'LEADCF51': score.toString(),
+      'LEADCF4': category,
+      'LEADCF3': 'Skin Intelligence Quiz'
     };
-    fetch('https://www.zohoapis.com/crm/v7/functions/captureskinquizlead/actions/execute?auth_type=apikey&zapikey=1003.4cef8ba001447a35cfa6dd58f1613813.222579883b00cb9b3a3915598f8e5baa', {
-      method: 'POST',
-      headers: { 'Content-Type': 'text/plain' },
-      body: JSON.stringify(data)
-    })
-    .then(r => r.json())
-    .then(d => console.log("CRM Response:", d))
-    .catch(e => console.log("CRM Error:", e));
+
+    for (const [name, value] of Object.entries(fields)) {
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = name;
+      input.value = value;
+      zohoForm.appendChild(input);
+    }
+
+    document.body.appendChild(zohoForm);
+    zohoForm.submit();
+    zohoForm.remove();
+    console.log('CRM: Quiz data submitted via web form');
   };
 
   // ── Parallax glow on hero (subtle mouse follow) ──
